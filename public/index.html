@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="@mayaeh が運営する Mastodon インスタンス用リレーサーバーです。主に日本語話者向け小規模インスタンスでの小規模の利用を想定しています。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="robots" content="noindex,nofollow">
+    <title>taruntarun relay</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/jumbotron-narrow.css">
+
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div id="mainContainer" class="container">
+      <div id="headerContainer" class="jumbotron">
+        <h1>taruntarun relay</h1>
+
+        <div id="siteDescription">
+          <p class="lead"><a href="https://taruntarun.net/@mayaeh" target="_blank" rel="noopener noreferrer">@mayaeh</a>が運営する Mastodon インスタンス用リレーサーバーです。<br />
+          主に日本語話者向け小規模インスタンスでの小規模の利用を想定しています。</p>
+        </div>
+        <!--siteDescription end-->
+
+        <div id="gettingStartedContainer">
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#gettingStartedContent">つかいかた</button> 
+        </div>
+      </div>
+      <!--headerContainer end-->
+
+
+
+      <div id="mainContentContainer">
+
+        <div class="modal fade" id="gettingStartedContent" tabindex="-1" role="dialog" aria-labelledby="gettingStartedTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="gettingStartedTitle">つかいかた</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Mastodon WebUI 管理画面を 管理 → リレー と進みます。<br />
+                  リレーを追加 を押してから リレーサーバーの inbox URL 欄に<br />
+                  次の URL をコピー＆ペーストしてください。</p>
+
+                <code>https://relay.taruntarun.net/inbox</code>
+
+                <p>登録前に<a href="#" data-toggle="modal" data-target="#termsContent">利用規約</a>をお読みください。<br />
+                  登録し利用を開始すると利用規約に同意したと見なします。</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--gettingStartedContent end-->
+
+        <div class="modal fade" id="termsContent" tabindex="-1" role="dialog" aria-labelledby="termsContentTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="termsContentTitle">利用規約</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>当リレーサーバーは主に日本語話者向け小規模インスタンスの接続を想定しています。</p>
+        
+                <p>次のような行為が行われるインスタンスの接続はご遠慮ください。</p>
+                <ul>
+                  <li>公序良俗に反する行為</li>
+                  <li>日本国内の法律に抵触するような行為</li>
+                  <li>犯罪をほのめかす行為</li>
+                  <li>他者を中傷・損害を与える行為</li>
+                  <li>情報収集を目的とした行為</li>
+                  <li>頻繁にオフラインになる等、当サーバーに負荷をかける行為</li>
+                  <li>その他サーバーに過度の負荷をかける行為</li>
+                </ul>
+
+                <p>また BOT による投稿は極力未収載設定をご利用ください。</p>
+
+                <p>インスタンスを長期間停止する場合は事前に登録を解除してください。</p>
+
+                <p>以上のことが守られていない場合、一方的に登録を停止する場合があります。</p>
+                <p id="termsModifyLog">2018/10/01 初版</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--termsContent end-->
+
+        <div class="modal fade" id="contactContent" tabindex="-1" role="dialog" aria-labelledby="contactContentTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="contactContentTitle">連絡先</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <dl>
+                  <dt>サイト管理者</dt>
+                  <dd>Maya Minatsuki</dd>
+                  <dt>Mastodon アカウント</dt>
+                  <dd><a href="https://taruntarun.net/@mayaeh" target="_blank" rel="noopener noreferrer">@mayaeh@taruntarun.net</a></dd>
+                  <dd><a href="https://mstdn.maud.io/@mayaeh" target="_blank" rel="noopener noreferrer">@mayaeh@mstdn.maud.io</a></dd>
+                  <dt>Mail</dt>
+                  <dd><a href="https://taruntarun.net/about/more" target="_blank" rel="noopener noreferrer">こちら</a>の管理者欄をご覧ください</dd>
+                </dl>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--contactContent end-->
+
+        <div class="modal fade" id="connectInstanceContent" tabindex="-1" role="dialog" aria-labelledby="connectInstanceTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="connectInstanceTitle">接続中インスタンス</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>comming soon...</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--connectInstanceContent end-->
+
+      </div>
+      <!--mainContentContainer end-->
+
+      <div id="footerContainer">
+        <nav id="footer" class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="./">トップ</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#termsContent">利用規約</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#contactContent">連絡先</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#connectInstanceContent">接続中インスタンス ( <span id="instanceCount">x</span> )</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://source.joinmastodon.org/mayaeh/pub-relay-prototype/tree/for-taruntarun" target="_blank" rel="noopener noreferrer">ソースコード</a></li>
+              <li class="nav-item dropup"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">LANGUAGE : <span id="selectCountry">JP</span></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="./">JP</a>
+                  <a class="dropdown-item" href="./index_en.html">EN</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!--mainContainer end-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    background: url("img/ffxiv_20171020_024924_mid.jpg") no-repeat #9ec2fe;
+}
+
+
+h1 {
+    margin: 0;
+}
+p.lead {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+/*#headerContainer {
+    padding: 30px 20px;
+}*/
+
+#mainContentContainer {
+    padding: 10px;
+    margin-bottom: 50px;
+    overflow: auto;
+}
+
+#termsContent {
+    -webkit-overflow-scrolling: touch;
+}
+
+#termsModifyLog {
+    margin-top: 20px;
+}
